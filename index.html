@@ -36,6 +36,7 @@
             text-align: center;
             position: relative;
             z-index: 2;
+            border-bottom: 3px solid #D4AF37;
         }
         .logo-img {
             width: 100%;
@@ -285,85 +286,6 @@
             display: block;
         }
         
-        /* DRESS CODE ESTILO REVISTA */
-        .dress-code-wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin: 40px 0;
-            padding: 0;
-            background: transparent;
-        }
-        .dress-left {
-            width: 45%;
-        }
-        .dress-left img {
-            width: 100%;
-            aspect-ratio: 3 / 4;
-            object-fit: cover;
-            border-radius: 6px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            border: 1px solid #E8DEC8;
-        }
-        .dress-center {
-            width: 10%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .vertical-text {
-            writing-mode: vertical-rl;
-            transform: rotate(180deg);
-            font-family: 'Cinzel', serif;
-            font-size: 1.6em;
-            letter-spacing: 4px;
-            color: #5C4A3D;
-            text-align: center;
-        }
-        .dress-right {
-            width: 45%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        .dress-right .info-title {
-            font-size: 1.1em;
-            margin-bottom: 15px;
-            line-height: 1.3;
-            color: #5C4A3D;
-        }
-        .palette-img {
-            width: 100%;
-            border-radius: 4px;
-            margin-bottom: 10px;
-        }
-        .color-circles {
-            display: flex;
-            gap: 6px;
-            margin-bottom: 15px;
-            justify-content: center;
-        }
-        .circle {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .c1 { background-color: #8d9b6e; }
-        .c2 { background-color: #d1b3d4; }
-        .c3 { background-color: #f0e6b3; }
-        .c4 { background-color: #f2c4ce; }
-        .c5 { background-color: #e0c09a; }
-        
-        .dress-right .info-paragraph {
-            font-size: 0.8em;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            line-height: 1.4;
-            padding: 0;
-        }
-
         /* PADRES Y PADRINOS */
         .info-subtitle {
             font-size: 0.85em;
@@ -391,6 +313,14 @@
             font-weight: 600;
         }
 
+        .info-text {
+            font-size: 1.25em;
+            font-style: italic;
+            color: #5C4A3D;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
         .info-paragraph {
             font-size: 1.1em;
             color: #5C4A3D;
@@ -443,7 +373,7 @@
             object-fit: cover; 
             border-radius: 4px; 
             box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
-            border: 5px solid #FFFFFF; /* Efecto fotografía impresa */
+            border: 5px solid #FFFFFF; 
             box-sizing: border-box;
         }
         
@@ -520,7 +450,7 @@
                 <div class="divider"><i class="fas fa-heart"></i></div>
 
                 <!-- FOTO 8 -->
-                <img src="fotos/foto8.jpeg" alt="Nuestra foto" class="section-img" onerror="this.style.display='none'">
+                <img src="fotos/foto8.jpeg" alt="Nuestra foto" class="section-img" onerror="this.onerror=null; this.src='fotos/foto8.jpg'; this.onerror=function(){this.style.display='none'};">
 
                 <!-- PADRES Y PADRINOS -->
                 <div class="info-block">
@@ -549,7 +479,7 @@
                 </div>
 
                 <!-- FOTO 7 -->
-                <img src="fotos/foto7.jpeg" alt="Nuestra foto" class="section-img" onerror="this.style.display='none'">
+                <img src="fotos/foto7.jpeg" alt="Nuestra foto" class="section-img" onerror="this.onerror=null; this.src='fotos/foto7.jpg'; this.onerror=function(){this.style.display='none'};">
 
                 <div class="divider"><i class="fas fa-heart"></i></div>
 
@@ -575,32 +505,20 @@
                     </div>
                 </div>
 
-                <!-- DRESS CODE ESTILO REVISTA CON FOTO 3 -->
-                <div class="dress-code-wrapper">
-                    <div class="dress-left">
-                        <img src="fotos/foto3.jpeg" alt="Dress Code" onerror="this.style.display='none'">
-                    </div>
-                    <div class="dress-center">
-                        <div class="vertical-text">DRESS CODE</div>
-                    </div>
-                    <div class="dress-right">
-                        <div class="info-title">FORMAL</div>
-                        
-                        <img src="fotos/ropa.png" alt="Ejemplo ropa" class="palette-img" onerror="this.style.display='none'">
-                        
-                        <div class="color-circles">
-                            <div class="circle c1"></div>
-                            <div class="circle c2"></div>
-                            <div class="circle c3"></div>
-                            <div class="circle c4"></div>
-                            <div class="circle c5"></div>
-                        </div>
-                        <div class="info-paragraph">FAVOR DE EVITAR<br>BLANCO, BEIGE O TONOS<br>MUY CLAROS</div>
+                <!-- FOTO 3 (A TAMAÑO NORMAL) -->
+                <img src="fotos/foto3.jpeg" alt="Nuestra foto" class="section-img" onerror="this.onerror=null; this.src='fotos/foto3.jpg'; this.onerror=function(){this.style.display='none'};">
+
+                <!-- NUEVO CÓDIGO DE VESTIMENTA (Frase elegante) -->
+                <div class="info-block" style="margin-top: 35px; margin-bottom: 35px;">
+                    <i class="fas fa-user-tie icon-gold"></i>
+                    <div class="info-title">Código de Vestimenta</div>
+                    <div class="info-text" style="font-size: 1.25em; line-height: 1.5; margin-top: 15px; padding: 0 10px;">
+                        "La magia de esta noche se vestirá de elegancia;<br>agradecemos asistir con atuendo formal."
                     </div>
                 </div>
 
                 <!-- FOTO 5 -->
-                <img src="fotos/foto5.jpeg" alt="Nuestra foto" class="section-img" onerror="this.style.display='none'">
+                <img src="fotos/foto5.jpeg" alt="Nuestra foto" class="section-img" onerror="this.onerror=null; this.src='fotos/foto5.jpg'; this.onerror=function(){this.style.display='none'};">
 
                 <!-- REGALOS -->
                 <div class="info-block">
@@ -610,7 +528,7 @@
                 </div>
 
                 <!-- FOTO 4 -->
-                <img src="fotos/foto4.jpeg" alt="Nuestra foto" class="section-img" onerror="this.style.display='none'">
+                <img src="fotos/foto4.jpeg" alt="Nuestra foto" class="section-img" onerror="this.onerror=null; this.src='fotos/foto4.jpg'; this.onerror=function(){this.style.display='none'};">
 
                 <!-- FRASE FINAL -->
                 <div class="final-quote">
@@ -621,14 +539,14 @@
             </div>
         </div>
 
-        <!-- MINI ÁLBUM (Fotos restantes) -->
+        <!-- MINI ÁLBUM (Fotos restantes a prueba de errores) -->
         <div class="mini-album">
             <div class="gallery-title">NUESTROS MOMENTOS</div>
             <div class="gallery">
-                <img src="fotos/foto2.jpeg" alt="Foto 2" onerror="this.style.display='none'">
-                <img src="fotos/foto6.jpeg" alt="Foto 6" onerror="this.style.display='none'">
-                <img src="fotos/foto9.jpeg" alt="Foto 9" onerror="this.style.display='none'">
-                <img src="fotos/foto10.jpeg" alt="Foto 10" onerror="this.style.display='none'">
+                <img src="fotos/foto2.jpeg" alt="Foto 2" onerror="this.onerror=null; this.src='fotos/foto2.jpg'; this.onerror=function(){this.style.display='none'};">
+                <img src="fotos/foto6.jpeg" alt="Foto 6" onerror="this.onerror=null; this.src='fotos/foto6.jpg'; this.onerror=function(){this.style.display='none'};">
+                <img src="fotos/foto9.jpeg" alt="Foto 9" onerror="this.onerror=null; this.src='fotos/foto9.jpg'; this.onerror=function(){this.style.display='none'};">
+                <img src="fotos/foto10.jpeg" alt="Foto 10" onerror="this.onerror=null; this.src='fotos/foto10.jpg'; this.onerror=function(){this.style.display='none'};">
             </div>
         </div>
 
