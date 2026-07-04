@@ -51,7 +51,6 @@
             min-height: 250px;
             display: block;
             object-fit: cover;
-            object-position: top; /* Evita que corte las cabezas */
             border-radius: 8px;
             box-shadow: 0 6px 15px rgba(0,0,0,0.08);
         }
@@ -258,7 +257,7 @@
             height: auto;
             aspect-ratio: 1 / 1;
             object-fit: cover;
-            object-position: top; /* Evita que corte las cabezas */
+            object-position: top;
             border-radius: 8px;
             box-shadow: 0 6px 15px rgba(0,0,0,0.1);
             margin: 35px 0;
@@ -296,7 +295,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin: 40px 0;
+            margin: 40px 0 15px;
             padding: 0;
             background: transparent;
         }
@@ -307,7 +306,7 @@
             width: 100%;
             aspect-ratio: 3 / 4;
             object-fit: cover;
-            object-position: top; /* Evita que corte las cabezas */
+            object-position: top;
             border-radius: 6px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             border: 1px solid #E8DEC8;
@@ -340,11 +339,6 @@
             line-height: 1.3;
             color: #5C4A3D;
         }
-        .palette-img {
-            width: 100%;
-            border-radius: 4px;
-            margin-bottom: 10px;
-        }
         .color-circles {
             display: flex;
             gap: 6px;
@@ -369,6 +363,17 @@
             letter-spacing: 1px;
             line-height: 1.4;
             padding: 0;
+        }
+
+        /* FRASE ELEGANTE (Zona Naranja) */
+        .elegant-phrase {
+            font-size: 1.35em;
+            font-style: italic;
+            color: #8B7355;
+            text-align: center;
+            margin: 10px 15px 40px;
+            line-height: 1.4;
+            font-weight: 600;
         }
 
         /* PADRES Y PADRINOS */
@@ -448,7 +453,7 @@
             width: 100%; 
             aspect-ratio: 1 / 1; 
             object-fit: cover; 
-            object-position: top; /* Evita que corte las cabezas en el mini álbum */
+            object-position: top;
             border-radius: 4px; 
             box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
             border: 5px solid #FFFFFF; 
@@ -593,9 +598,6 @@
                     </div>
                     <div class="dress-right">
                         <div class="info-title">FORMAL DE<br>PLAYA</div>
-                        
-                        <img src="fotos/ropa.png" alt="Ejemplo ropa" class="palette-img" onerror="this.style.display='none'">
-                        
                         <div class="color-circles">
                             <div class="circle c1"></div>
                             <div class="circle c2"></div>
@@ -605,6 +607,11 @@
                         </div>
                         <div class="info-paragraph">FAVOR DE EVITAR<br>BLANCO, BEIGE O TONOS<br>MUY CLAROS</div>
                     </div>
+                </div>
+
+                <!-- FRASE ELEGANTE (Zona Naranja) -->
+                <div class="elegant-phrase">
+                    "La magia de esta noche se vestirá de elegancia;<br>agradecemos asistir con atuendo formal."
                 </div>
 
                 <!-- FOTO 5 -->
