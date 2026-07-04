@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* PALETA ESTRICTA: Blanco, Beige y Dorado q*/
+        /* PALETA ESTRICTA: Blanco, Beige y Dorado */
         body {
             margin: 0;
             padding: 0;
@@ -38,14 +38,33 @@
             z-index: 2;
             border-bottom: 3px solid #D4AF37;
         }
-        .logo-img {
-            width: 100%;
-            max-width: 180px;
-            height: auto;
-            margin: 0 auto 20px;
-            display: block;
-            filter: drop-shadow(0px 2px 5px rgba(0,0,0,0.05));
+        
+        /* NUEVO LOGO EN TEXTO Y FRASE */
+        .text-logo {
+            font-family: 'Great Vibes', cursive;
+            font-size: 5.5em;
+            color: #D4AF37;
+            margin: 0 auto 5px;
+            line-height: 1;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
         }
+        .text-logo span {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 0.6em;
+            color: #D4AF37;
+            margin: 0 5px;
+        }
+        .tech-quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.35em;
+            color: #8B7355;
+            line-height: 1.4;
+            margin: 0 auto 30px;
+            max-width: 95%;
+            font-weight: 600;
+        }
+
         .img-pareja {
             width: 100%;
             min-height: 250px;
@@ -286,6 +305,81 @@
             margin-bottom: 15px;
             display: block;
         }
+        
+        /* DRESS CODE ESTILO REVISTA */
+        .dress-code-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 40px 0;
+            padding: 0;
+            background: transparent;
+        }
+        .dress-left {
+            width: 45%;
+        }
+        .dress-left img {
+            width: 100%;
+            aspect-ratio: 3 / 4;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border: 1px solid #E8DEC8;
+        }
+        .dress-center {
+            width: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .vertical-text {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            font-family: 'Cinzel', serif;
+            font-size: 1.6em;
+            letter-spacing: 4px;
+            color: #5C4A3D;
+            text-align: center;
+        }
+        .dress-right {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .dress-right .info-title {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            line-height: 1.3;
+            color: #5C4A3D;
+        }
+        .color-circles {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 15px;
+            justify-content: center;
+        }
+        .circle {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .c1 { background-color: #8d9b6e; }
+        .c2 { background-color: #d1b3d4; }
+        .c3 { background-color: #f0e6b3; }
+        .c4 { background-color: #f2c4ce; }
+        .c5 { background-color: #e0c09a; }
+        
+        .dress-right .info-paragraph {
+            font-size: 0.8em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
+            padding: 0;
+        }
 
         /* PADRES Y PADRINOS */
         .info-subtitle {
@@ -337,17 +431,6 @@
             border: none;
         }
 
-        /* FRASE ELEGANTE PARA DRESS CODE */
-        .elegant-phrase {
-            font-size: 1.35em;
-            font-style: italic;
-            color: #8B7355;
-            text-align: center;
-            margin: 20px 15px 40px;
-            line-height: 1.4;
-            font-weight: 600;
-        }
-
         /* FRASE FINAL */
         .final-quote {
             font-family: 'Great Vibes', cursive;
@@ -388,9 +471,11 @@
 <body>
     <div class="mobile-wrapper">
         
-        <!-- ENCABEZADO CON LOGO Y FOTO PRINCIPAL -->
+        <!-- ENCABEZADO CON LOGO TEXTO Y FOTO PRINCIPAL -->
         <div class="top-section">
-            <img src="fotos/logo.png" alt="Logo Jazmin y Jose" class="logo-img" onerror="this.style.display='none'">
+            <div class="text-logo">J <span>&</span> J</div>
+            <div class="tech-quote">"Entre códigos y fórmulas, encontramos el algoritmo perfecto para el amor eterno."</div>
+            
             <img src="fotos/pareja.png" alt="Jazmin y Jose" class="img-pareja" onerror="this.src='fotos/pareja.jpg'">
         </div>
 
@@ -510,12 +595,26 @@
                     </div>
                 </div>
 
-                <!-- FOTO 3 A TAMAÑO NORMAL -->
-                <img src="fotos/foto3.jpeg" alt="Nuestra foto" class="section-img" onerror="this.onerror=null; this.src='fotos/foto3.jpg'; this.onerror=function(){this.style.display='none'};">
-
-                <!-- FRASE ELEGANTE (Reemplaza al Dress Code) -->
-                <div class="elegant-phrase">
-                    "La magia de esta noche se vestirá de elegancia;<br>agradecemos asistir con atuendo formal."
+                <!-- DRESS CODE ESTILO REVISTA CON FOTO 3 -->
+                <div class="dress-code-wrapper">
+                    <div class="dress-left">
+                        <img src="fotos/foto3.jpeg" alt="Dress Code" onerror="this.onerror=null; this.src='fotos/foto3.jpg'; this.onerror=function(){this.style.display='none'};">
+                    </div>
+                    <div class="dress-center">
+                        <div class="vertical-text">DRESS CODE</div>
+                    </div>
+                    <div class="dress-right">
+                        <div class="info-title">FORMAL DE<br>PLAYA</div>
+                        
+                        <div class="color-circles">
+                            <div class="circle c1"></div>
+                            <div class="circle c2"></div>
+                            <div class="circle c3"></div>
+                            <div class="circle c4"></div>
+                            <div class="circle c5"></div>
+                        </div>
+                        <div class="info-paragraph">FAVOR DE EVITAR<br>BLANCO, BEIGE O TONOS<br>MUY CLAROS</div>
+                    </div>
                 </div>
 
                 <!-- FOTO 5 -->
@@ -540,7 +639,7 @@
             </div>
         </div>
 
-        <!-- MINI ÁLBUM (Fotos restantes) -->
+        <!-- MINI ÁLBUM (Fotos restantes a prueba de errores) -->
         <div class="mini-album">
             <div class="gallery-title">NUESTROS MOMENTOS</div>
             <div class="gallery">
