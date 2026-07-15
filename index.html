@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="robots" content="noindex">
     <title>Boda Jazmin & Jose</title>
+
+    <!-- ETIQUETAS PARA VISTA PREVIA EN WHATSAPP -->
+    <meta property="og:title" content="Nuestra Boda | Jazmin & Jose">
+    <meta property="og:description" content="Tenemos el honor de invitarte a nuestra boda. ¡Acompáñanos en este día tan especial!">
+    <meta property="og:image" content="https://darkmnbg-sys.github.io/Boda-Jazmin-y-Jose/fotos/pareja.jpg">
+    <meta property="og:url" content="https://darkmnbg-sys.github.io/Boda-Jazmin-y-Jose/">
+    <meta property="og:type" content="website">
+
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -17,6 +25,11 @@
             background-size: 20px 20px;
             font-family: 'Cormorant Garamond', serif;
             color: #5C4A3D;
+            /* PROTECCIÓN CONTRA SELECCIÓN DE TEXTO */
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
         .mobile-wrapper {
             width: 100%;
@@ -377,18 +390,6 @@
             border: none;
         }
 
-        /* FRASE ELEGANTE */
-        .elegant-phrase {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.4em;
-            font-style: italic;
-            color: #8B7355;
-            text-align: center;
-            margin: 30px 15px 40px;
-            line-height: 1.5;
-            font-weight: 600;
-        }
-
         /* FRASE FINAL */
         .final-quote {
             font-family: 'Great Vibes', cursive;
@@ -574,7 +575,7 @@
                     
                     <div style="margin-top: 20px;">
                         <div class="info-subtitle" style="color: #D4AF37; font-size: 0.95em;">Liverpool</div>
-                        <div class="info-text" style="font-size: 1.2em; letter-spacing: 2px; margin-bottom: 0;">No. de Evento: <span style="font-family: sans-serif; font-weight: bold; letter-spacing: 2px;">60013119</span></div>
+                        <div class="info-text" style="font-size: 1.2em; letter-spacing: 2px; margin-bottom: 0; color: #5C4A3D;">Evento: <span style="font-family: sans-serif; font-weight: bold; letter-spacing: 2px;">12345678</span></div>
                     </div>
                 </div>
 
@@ -606,6 +607,16 @@
         <!-- FOOTER -->
         <img src="fotos/footer.jpg" alt="Footer" class="footer-img" onerror="this.style.display='none'">
     </div>
+
+    <!-- PROTECCIÓN CONTRA CLIC DERECHO Y ARRASTRE -->
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        document.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+        });
+    </script>
 
     <script>
         const music = document.getElementById("bg-music");
